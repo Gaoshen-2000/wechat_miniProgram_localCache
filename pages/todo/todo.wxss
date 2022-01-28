@@ -1,0 +1,57 @@
+/* pages/todo/todo.wxss */
+.container {
+    background-color: white;
+    width: 100%;
+}
+
+.date {
+    font-size: 20px;
+}
+
+.addRecord {
+    width: 100%;
+}
+.input {
+    border: 1rpx solid #e0e0e0;
+    border-radius: 5rpx;
+    margin: 30rpx;
+    padding: 20rpx;
+}
+
+.list {
+    vertical-align: center;
+    font-size: 15px;
+    width: 90%;
+    height:500px;
+}
+
+.listItem {
+    display: flex;
+    flex-direction: row;
+    padding: 20rpx;
+    background-color: #00a2ea;
+    border: 10rpx solid white;
+    border-radius: 20rpx;
+}
+
+.checkbox {
+    margin-right: 20rpx;
+}
+
+.itemCompleted {
+    flex: 1;
+    font-size: 40rpx;
+    color: white;
+    text-decoration: line-through;
+}
+
+.itemUncompleted {
+    flex: 1;
+    font-size: 40rpx;
+    color: white;
+}
+
+.itemRemove {
+    cursor: pointer;
+    padding-top: 7rpx;
+}

@@ -1,0 +1,16 @@
+<!--pages/todo/todo.wxml-->
+<view class="container">
+    <view class="date">
+        <text>{{date}}</text>
+    </view>
+    <view class="addRecord">
+        <input value="{{input}}" auto-focus class="input" placeholder="输入一个新计划" bindinput='inputChange' bindconfirm='addSingleRecord' />
+    </view>
+    <scroll-view class="list" scroll-y>
+        <view class="listItem" wx:for="{{todoList}}" wx:key="{{index}}" bindtap="changeCompleted" id="{{index}}">
+            <icon class="checkbox" type="{{item.completed ? 'success' : 'circle'}}" color="white" />
+            <text class="{{item.completed ? 'itemCompleted':'itemUncompleted'}}">{{item.description}}</text>
+            <icon class='itemRemove' type='clear' size='20' color="white" catchtap="removeSingleRecord" id="{{index}}" />
+        </view>
+    </scroll-view>
+</view>
